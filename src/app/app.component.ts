@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flipkart';
-  constructor(){
+  constructor(private http:HttpClient){
     console.log("hee");
-
+    
+    this.http.get("http://localhost:4000/api/user").subscribe(res => console.log("===========",res));
   }
 }
