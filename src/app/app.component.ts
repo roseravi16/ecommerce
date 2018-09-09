@@ -7,10 +7,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'flipkart';
-  constructor(private http:HttpClient){
-    console.log("hee");
-    
-    this.http.get("http://localhost:4000/api/user").subscribe(res => console.log("===========",res));
+  title = 'Online India';
+
+  homeFunction(){
+    console.log("calllllllllllllll")
   }
+  
 }
